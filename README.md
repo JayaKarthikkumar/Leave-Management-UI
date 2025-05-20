@@ -35,30 +35,30 @@ A web-based Leave Management System built using JavaScript for the frontend and 
 
 ## 🗂️ Folder Structure
 
-project-root/
 leave-management-system/
-├── client/ # Frontend files (HTML, CSS, JS)
-│ ├── login.html # Login page for both roles
-│ ├── employee.html # Employee dashboard
-│ ├── manager.html # Manager dashboard
-│ ├── styles/
-│ │ └── styles.css # Shared styling
-│ └── js/ # Frontend JavaScript files
-│ ├── login.js # Handles login logic
-│ ├── employee.js # Employee-specific logic
-│ └── manager.js # Manager-specific logic
+├── client/                      # Frontend files (HTML, CSS, JS)
+│   ├── login.html               # Login page for both employee and manager
+│   ├── employee.html            # Dashboard for employees
+│   ├── manager.html             # Dashboard for managers
+│   ├── styles/
+│   │   └── styles.css           # CSS styling for all pages
+│   └── js/
+│       ├── login.js             # Handles login functionality
+│       ├── employee.js          # Logic for employee actions (submit/view requests)
+│       └── manager.js           # Logic for manager actions (approve/reject requests)
 │
-├── server/ # Backend files (Node.js + Express)
-│ ├── index.js # Main server file
-│ ├── db.js # MySQL DB connection setup
-│ ├── routes/
-│ │ └── leaveRoutes.js # API routes for leave management
-│ └── controllers/
-│ └── leaveController.js # Logic for handling requests
+├── server/                      # Backend files
+│   ├── index.js                 # Main Express server file
+│   ├── db.js                    # MySQL database connection
+│   ├── routes/
+│   │   └── leaveRoutes.js       # API route definitions
+│   └── controllers/
+│       └── leaveController.js   # Request handling logic for leave features
 │
-├── .env # Environment variables (not committed)
-├── package.json # Node.js dependencies and scripts
-└── README.md # Project documentation
+├── .env                         # Environment variables for database connection
+├── package.json                 # NPM dependencies and scripts
+└── README.md                    # Project documentation
+
 
 
 ## 📦 Installation
