@@ -68,16 +68,80 @@ leave-management-system/
 ```bash
 git clone https://github.com/JayaKarthikkumar/Leave-Management-UI.git
 
-2.Install backend dependencies:
+2. 🖥️ Set Up the Backend
+bash
+Copy
+Edit
 cd server
 npm install
+3. 🔐 Configure Environment Variables
+Create a .env file in the server/ directory and add the following:
 
-3.Setup the Backend
-Create a .env file in the server/ directory:
+ini
+Copy
+Edit
 DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=yourpassword
+DB_USER=your_mysql_user
+DB_PASSWORD=your_mysql_password
 DB_NAME=leave_management
 PORT=5000
-4.4. Start the Backend
+4. 🧱 Set Up the Database
+Log into your MySQL and run the following SQL:
+
+sql
+
+CREATE DATABASE leave_management;
+
+USE leave_management;
+
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50),
+  password VARCHAR(50),
+  role ENUM('employee', 'manager')
+);
+
+CREATE TABLE leave_requests (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT,
+  from_date DATE,
+  to_date DATE,
+  reason TEXT,
+  status ENUM('pending', 'approved', 'rejected') DEFAULT 'pending',
+  FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+INSERT INTO users (username, password, role) VALUES
+('employee1', '4321', 'employee'),
+('manager1', '1234', 'manager');
+5. ▶️ Start the Backend Server
+
 npm start
+Server will start at http://localhost:5000.
+
+6. 🌐 Run the Frontend
+Navigate to the client/ directory:
+
+cd ../client
+Then open login.html in your browser, or deploy the folder to Vercel.
+
+🧭 Future Improvements
+🔐 Add JWT-based authentication
+
+📩 Add email notifications for approvals/rejections
+
+📊 Add analytics dashboard for leave stats
+
+📱 Make the UI mobile-responsive
+
+🧾 Add user registration flow
+
+🤝 Contributing
+Pull requests are welcome! Feel free to fork the repo and submit improvements.
+
+📄 License
+This project is licensed under the MIT License.
+
+🙋‍♂️ Author
+Jayakarthikkumar R D
+GitHub: @JayaKarthikkumar
