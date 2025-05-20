@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Leave Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web-based Leave Management System built using JavaScript for the frontend and MySQL for the backend. It allows employees to request leaves and managers to approve or reject them.
 
-## Available Scripts
+## 🌐 Live Demo
 
-In the project directory, you can run:
+🔗 [Leave Management System](https://leave-management-system-jk.vercel.app/login)
 
-### `npm start`
+- **Manager Login:**  
+  - Username: manager   
+  - Password: `1234`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Employee Login:**  
+  - Username: employee   
+  - Password: `4321`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📌 Features
 
-### `npm test`
+### Employee
+- Login with credentials
+- Submit leave requests
+- View leave request status
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Manager
+- Login with credentials
+- View all employee leave requests
+- Approve or reject leave requests
 
-### `npm run build`
+## 🛠️ Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** Node.js, Express.js
+- **Database:** MySQL
+- **Hosting:** Vercel (Frontend), Render/Other (Backend)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🗂️ Folder Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+project-root/
+├── client/ (Frontend files)
+│ ├── index.html
+│ ├── login.html
+│ ├── employeeDashboard.html
+│ ├── managerDashboard.html
+│ └── js/
+│ ├── auth.js
+│ ├── employee.js
+│ └── manager.js
+├── server/ (Backend API)
+│ ├── index.js
+│ ├── routes/
+│ ├── controllers/
+│ └── db.js
+└── README.md
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📦 Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+git clone https://github.com/JayaKarthikkumar/Leave-Management-UI.git
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2.Install backend dependencies:
+cd server
+npm install
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+3.Setup the Backend
+Create a .env file in the server/ directory:
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=yourpassword
+DB_NAME=leave_management
+PORT=5000
+4.4. Start the Backend
+npm start
