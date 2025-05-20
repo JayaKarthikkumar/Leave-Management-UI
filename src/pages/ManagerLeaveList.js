@@ -17,7 +17,7 @@ const ManagerLeaveList = () => {
     {
       id: 1,
       userId: 2,
-      fullName: 'John Doe',
+      fullName: 'Gnanam R',
       startDate: '2023-10-15',
       endDate: '2023-10-20',
       reason: 'Family vacation',
@@ -29,7 +29,7 @@ const ManagerLeaveList = () => {
     {
       id: 2,
       userId: 3,
-      fullName: 'Jane Smith',
+      fullName: 'JK',
       startDate: '2023-11-05',
       endDate: '2023-11-07',
       reason: 'Medical appointment',
@@ -41,7 +41,7 @@ const ManagerLeaveList = () => {
     {
       id: 3,
       userId: 4,
-      fullName: 'Alice Johnson',
+      fullName: 'Amal',
       startDate: '2023-09-10',
       endDate: '2023-09-15',
       reason: 'Personal leave',
@@ -53,7 +53,7 @@ const ManagerLeaveList = () => {
     {
       id: 4,
       userId: 5,
-      fullName: 'Bob Brown',
+      fullName: 'Barath',
       startDate: '2023-08-01',
       endDate: '2023-08-05',
       reason: 'Family emergency',
