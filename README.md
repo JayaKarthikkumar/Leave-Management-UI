@@ -36,21 +36,29 @@ A web-based Leave Management System built using JavaScript for the frontend and 
 ## 🗂️ Folder Structure
 
 project-root/
-├── client/ (Frontend files)
-│ ├── index.html
-│ ├── login.html
-│ ├── employeeDashboard.html
-│ ├── managerDashboard.html
-│ └── js/
-│ ├── auth.js
-│ ├── employee.js
-│ └── manager.js
-├── server/ (Backend API)
-│ ├── index.js
+leave-management-system/
+├── client/ # Frontend files (HTML, CSS, JS)
+│ ├── login.html # Login page for both roles
+│ ├── employee.html # Employee dashboard
+│ ├── manager.html # Manager dashboard
+│ ├── styles/
+│ │ └── styles.css # Shared styling
+│ └── js/ # Frontend JavaScript files
+│ ├── login.js # Handles login logic
+│ ├── employee.js # Employee-specific logic
+│ └── manager.js # Manager-specific logic
+│
+├── server/ # Backend files (Node.js + Express)
+│ ├── index.js # Main server file
+│ ├── db.js # MySQL DB connection setup
 │ ├── routes/
-│ ├── controllers/
-│ └── db.js
-└── README.md
+│ │ └── leaveRoutes.js # API routes for leave management
+│ └── controllers/
+│ └── leaveController.js # Logic for handling requests
+│
+├── .env # Environment variables (not committed)
+├── package.json # Node.js dependencies and scripts
+└── README.md # Project documentation
 
 
 ## 📦 Installation
